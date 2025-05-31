@@ -7,7 +7,7 @@ body {
 }
 .main-grid {
   display: grid;
-  grid-template-columns: 472px 330px 448px;
+  grid-template-columns: 1fr 330px 1fr;
   grid-template-rows: 101px 478px 351px 101px;
   grid-template-areas:
     "header header header"
@@ -34,9 +34,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
+  /* display: flex; flex-direction: column; 제거: grid만 사용 */
 }
 .header {
   background: #F2FFE6;
@@ -48,7 +47,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 885px;
+  gap: 64px;
 }
 .logo {
   font-family: 'Gilroy', Arial, sans-serif;
