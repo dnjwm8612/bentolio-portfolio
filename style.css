@@ -1,17 +1,20 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F9F1F0;
+  background: #E8FFD8;
   font-family: 'Gilroy', Arial, sans-serif;
   color: #000;
 }
 .container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .header {
-  background: #FADCD9;
+  background: #F2FFE6;
   border-radius: 20px;
   margin-bottom: 32px;
   padding: 24px;
@@ -40,7 +43,7 @@ body {
   color: #000;
 }
 .slogan-intro {
-  background: #FADCD9;
+  background: #F2FFE6;
   border-radius: 20px;
   margin-bottom: 32px;
   padding: 48px 24px 24px 24px;
@@ -63,17 +66,16 @@ body {
   height: 119px;
 }
 .portrait-section {
-  position: absolute;
-  left: 614px;
-  top: 148px;
-  width: 330px;
-  height: 476px;
+  flex: 1 1 330px;
+  max-width: 330px;
+  min-width: 220px;
   background: #fff;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin: 24px auto;
 }
 .portrait-img {
   width: 355px;
@@ -83,17 +85,15 @@ body {
   margin-top: -19px;
 }
 .work-section {
-  position: absolute;
-  right: 24px;
-  top: 149px;
-  width: 447px;
-  height: 726px;
-  background: #FADCD9;
+  background: #F2FFE6;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 24px;
+  margin: 24px auto;
+  max-width: 447px;
+  width: 100%;
 }
 .work-item {
   position: relative;
@@ -121,14 +121,12 @@ body {
   height: 26px;
 }
 .about-section {
-  position: absolute;
-  left: 24px;
-  top: 649px;
-  width: 448px;
-  height: 351px;
-  background: #FADCD9;
+  background: #F2FFE6;
   border-radius: 20px;
   padding: 24px;
+  margin: 24px auto;
+  max-width: 448px;
+  width: 100%;
 }
 .about-text {
   font-family: 'Gilroy', Arial, sans-serif;
@@ -142,14 +140,12 @@ body {
   height: 38px;
 }
 .contact-section {
-  position: absolute;
-  left: 496px;
-  top: 649px;
-  width: 448px;
-  height: 351px;
-  background: #F8AFA6;
+  background: #D6FFB7;
   border-radius: 20px;
   padding: 24px;
+  margin: 24px auto;
+  max-width: 448px;
+  width: 100%;
 }
 .contact-title {
   font-family: 'Gilroy', Arial, sans-serif;
@@ -175,16 +171,14 @@ body {
   height: 38px;
 }
 .socials-section {
-  position: absolute;
-  right: 24px;
-  top: 899px;
-  width: 448px;
-  height: 101px;
-  background: #FADCD9;
+  background: #F2FFE6;
   border-radius: 20px;
   display: flex;
   align-items: center;
   padding: 24px 56px;
+  margin: 24px auto;
+  max-width: 448px;
+  width: 100%;
 }
 .social-links {
   display: flex;
@@ -200,9 +194,42 @@ body {
   color: #000;
   text-decoration: none;
 }
-@media (max-width: 1440px) {
+@media (max-width: 900px) {
   .container {
     max-width: 100vw;
     padding: 8px;
+  }
+  .header, .slogan-intro, .portrait-section, .work-section, .about-section, .contact-section, .socials-section {
+    max-width: 100%;
+    width: 100%;
+    margin: 12px auto;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .slogan-text {
+    font-size: 32px;
+  }
+  .portrait-img {
+    width: 180px;
+    height: 280px;
+    margin: 0;
+  }
+  .work-img {
+    width: 100%;
+    height: auto;
+  }
+  .work-title, .about-text, .contact-title {
+    font-size: 16px;
+  }
+  .contact-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .social-links {
+    gap: 24px;
+    width: 100%;
   }
 }
