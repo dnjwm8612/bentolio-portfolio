@@ -5,6 +5,31 @@ body {
   font-family: 'Gilroy', Arial, sans-serif;
   color: #000;
 }
+.main-grid {
+  display: grid;
+  grid-template-columns: 472px 330px 448px;
+  grid-template-rows: 101px 478px 351px 101px;
+  grid-template-areas:
+    "header header header"
+    "slogan portrait work"
+    "about contact work"
+    ". socials work";
+  max-width: 1440px;
+  min-height: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #E8FFD8;
+  gap: 24px;
+}
+
+.header { grid-area: header; }
+.slogan-intro { grid-area: slogan; }
+.portrait-section { grid-area: portrait; }
+.work-section { grid-area: work; }
+.about-section { grid-area: about; }
+.contact-section { grid-area: contact; }
+.socials-section { grid-area: socials; }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -43,7 +68,7 @@ body {
   color: #000;
 }
 .slogan-intro {
-  background: #F2FFE6;
+  background: #FADCD9;
   border-radius: 20px;
   margin-bottom: 32px;
   padding: 48px 24px 24px 24px;
